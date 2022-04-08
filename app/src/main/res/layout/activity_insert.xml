@@ -5,5 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InsertActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nevMezo"
+        android:hint="Nev"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/orszagMezo"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orszagMezo"
+        android:hint="Orszag"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/nevMezo"
+        app:layout_constraintBottom_toTopOf="@+id/lakossagMezo"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lakossagMezo"
+        android:hint="Lakossag"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/orszagMezo"
+        app:layout_constraintBottom_toTopOf="@+id/felvetelGomb"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/felvetelGomb"
+        android:text="Felvetel"
+        app:layout_constraintTop_toBottomOf="@+id/lakossagMezo"
+        app:layout_constraintBottom_toTopOf="@+id/visszaGomb"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visszaGomb"
+        android:text="Vissza"
+        app:layout_constraintTop_toBottomOf="@+id/felvetelGomb"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
